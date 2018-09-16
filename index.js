@@ -1,2 +1,2 @@
-const name = process.argv[2];
-console.log('Hi '+name+'!');
+const params = process.argv;
+console.log('Params: '+params);
