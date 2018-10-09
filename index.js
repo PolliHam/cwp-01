@@ -1,2 +1,3 @@
-const params = process.argv;
-console.log('Params: '+params);
+const fs = require('fs');
+const path = require('path');
+const dir_path = process.argv[2];
