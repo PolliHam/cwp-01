@@ -29,24 +29,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="8" />
+          <entry key="js" value="11" />
           <entry key="k" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="8" />
+          <entry key="JavaScript" value="11" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="374" />
+          <entry key="js" value="519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="374" />
+          <entry key="JavaScript" value="519" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -58,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="185">
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -80,6 +80,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/qwe.js" />
+        <option value="$PROJECT_DIR$/summary.js" />
         <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
@@ -115,16 +116,21 @@
               <item name="cwp-01" type="b2602c69:ProjectViewProjectNode" />
               <item name="cwp-01" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
             <path>
-              <item name="cwp-01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cwp-01" type="462c0819:PsiDirectoryNode" />
-              <item name="hjjk" type="462c0819:PsiDirectoryNode" />
+              <item name="cwp-01" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,21 +178,22 @@
       <workItem from="1537966646200" duration="567000" />
       <workItem from="1538083897772" duration="3846000" />
       <workItem from="1538100610583" duration="3360000" />
-      <workItem from="1539123774649" duration="331000" />
+      <workItem from="1539123774649" duration="5852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11798000" />
+    <option name="totallyTimeSpent" value="17319000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -194,7 +201,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32885906" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -218,10 +225,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/summary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="185">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
         </state>
       </provider>
     </entry>
