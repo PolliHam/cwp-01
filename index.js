@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const config = require('config.json');
+const config = require('./config.json');
 let copyright = config.copyright;
 const dir_path = process.argv[2];
 let new_dir_path;
@@ -26,6 +26,7 @@ let text_script =
     '}\r\n'+
     'parser(dir_path);\r\n';
 
+
 function accessFile() {
     fs.access(dir_path,(err)=>{
         if(err){
@@ -34,7 +35,7 @@ function accessFile() {
         else{
             createFile();
             copyFile();
-
+            setTimeout(checkChanges, 4);
         }
     });
 }
@@ -68,7 +69,7 @@ function createDir(){
     new_dir_path = dir_path+'\\'+path.basename(dir_path);
     fs.access(new_dir_path, (err) => {
         if (!err) {
-            console.log('Error in dir path');
+            console.log('dir is exists');
         }
         else{
             fs.mkdir(new_dir_path,(err)=>{
@@ -91,11 +92,21 @@ function createTxtFile(file_path) {
 }
 
 function copyText(file_path, text){
-    fs.appendFile(new_dir_path+'\\'+file_path, text, 'utf8', (err)=> {
+    fs.writeFile(new_dir_path+'\\'+file_path, text, 'utf8', (err)=> {
         if(err) {
             console.log(err);
         }
     });
 }
 
+function checkChanges() {
+    fs.watch(new_dir_path, (eventType, filename) => {
+        console.log('event type is: '+eventType);
+        if (filename) {
+            console.log('filename provided: '+filename.toString());
+        } else {
+            console.log('filename not provided');
+        }
+    });
+}
 accessFile();
