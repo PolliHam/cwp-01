@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const config = require('config.json');
+let copyright = config.copyright;
 const dir_path = process.argv[2];
 let new_dir_path;
 let text_script =
@@ -36,11 +38,28 @@ function accessFile() {
         }
     });
 }
+
 function createFile(){
     let file_name = dir_path+'/summary.js';
     fs.writeFile(file_name, text_script, (err)=>{
         if(err){
             console.log('Error in creating file');
+        }
+    });
+}
+
+function copyFile(){
+    createDir();
+    fs.readdir(dir_path, function (err, files) {
+        if(err){
+            console.log(err);
+        }else{
+            for(let i = 0; i<files.length; i++){
+                let file_name = files[i].toString();
+                if(/.*\.txt/.test(file_name)){
+                    createTxtFile(file_name);
+                }
+            }
         }
     });
 }
@@ -57,6 +76,24 @@ function createDir(){
                     console.log(err);
                 }
             });
+        }
+    });
+}
+
+function createTxtFile(file_path) {
+    fs.readFile(dir_path+'\\'+file_path, 'utf8', (err, data)=> {
+        if(err){
+            console.log(err);
+        }else{
+            copyText(file_path, copyright+data+copyright);
+        }
+    });
+}
+
+function copyText(file_path, text){
+    fs.appendFile(new_dir_path+'\\'+file_path, text, 'utf8', (err)=> {
+        if(err) {
+            console.log(err);
         }
     });
 }
