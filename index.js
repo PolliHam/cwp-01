@@ -34,8 +34,7 @@ function accessFile() {
         }
         else{
             createFile();
-            copyFile();
-            setTimeout(checkChanges, 4);
+            copyFile(checkChanges);
         }
     });
 }
@@ -49,7 +48,7 @@ function createFile(){
     });
 }
 
-function copyFile(){
+function copyFile(callback){
     createDir();
     fs.readdir(dir_path, function (err, files) {
         if(err){
@@ -62,6 +61,7 @@ function copyFile(){
                 }
             }
         }
+        callback();
     });
 }
 
