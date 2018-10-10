@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const dir_path = process.argv[2];
+let new_dir_path;
 let text_script =
     'const fs = require(\'fs\');\r\n'+
     'const path = require(\'path\');\r\n'+
@@ -30,6 +31,8 @@ function accessFile() {
         }
         else{
             createFile();
+            copyFile();
+
         }
     });
 }
@@ -41,4 +44,21 @@ function createFile(){
         }
     });
 }
+
+function createDir(){
+    new_dir_path = dir_path+'\\'+path.basename(dir_path);
+    fs.access(new_dir_path, (err) => {
+        if (!err) {
+            console.log('Error in dir path');
+        }
+        else{
+            fs.mkdir(new_dir_path,(err)=>{
+                if (err) {
+                    console.log(err);
+                }
+            });
+        }
+    });
+}
+
 accessFile();
